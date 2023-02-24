@@ -107,4 +107,64 @@ SELECT * FROM salaries;
 ------------
 
 
+--Create a new table
+CREATE TABLE titles(
+    title_id VARCHAR (20),
+    title  VARCHAR (20)
+);
+--Populate the table data
+SELECT * FROM titles;
+
+----------
+
+--Joining two TABLES
+SELECT dept_manager.sa, dept_employment.emp_no
+FROM departments
+INNER JOIN dept_employment ON
+departments.dept_no = dept_employment.dept_no;
+
+
+--Create a new table
+CREATE TABLE salaries(
+    emp_no INT,
+    salary INT
+);
+--Populate the table data
+SELECT * FROM salaries;
+----
+
+DROP TABLE departments;
+--Create a new table
+CREATE TABLE departments(
+    dept_no VARCHAR(30),
+    dept_name VARCHAR (30)
+);
+--Populate the table data
+SELECT * FROM departments;
+
+--Joining two TABLES
+SELECT departments.dept_name, dept_employment.emp_no
+FROM departments
+INNER JOIN dept_employment ON
+departments.dept_no = dept_employment.dept_no;
+
+--Create a new table
+CREATE TABLE dept_employment(
+    emp_no INT,
+    dept_no  VARCHAR (20)
+);
+--Populate the table data
+SELECT * FROM dept_employment;
+
+-------
+
+
+-------------
+--Create a new table
+CREATE TABLE dept_manager(
+    dept_no VARCHAR(30),
+    emp_no INT
+);
+--Populate the table data
+SELECT * FROM dept_manager;
 
