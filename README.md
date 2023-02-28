@@ -1,9 +1,17 @@
 # **SQL_Challenge
 ## EmployeeSQL. 
-The EmployeeSQL is an attempt to set company's data ready to use. Below is a summary of all the tables extracted from the raw data. 
+The EmployeeSQL is an attempt to set company's data structured. Below is an overview of the process in order to extract the desired datasets. 
 
 -----
-- The raw data were provided to me in six separate csv files which weren't really helpful in gathering useful information out of those. From the other side it was a waste of time to open six csv file to provide data on an employees' department_number ot salary. I used bewlo questions as hint to analyze data:
+- Run Postgres and pgAdmin.
+- Created a SQL database and its tables by using pgAdmin.
+- Defined SQL data types, primary keys, and unique values.
+- Loaded the data from CSV files into a database and then query the data.
+- Explained the four basic functions of persistent storage—create, read, update, delete (CRUD)—and apply them to a database.
+- Combined the data from multiple tables by using JOIN clauses. 
+
+Note: The ables information are commented next to every single statement. I copied them here to make it easier to read and accessible.  
+
     * List the employee number, last name, first name, sex, and salary of each employee.
 
     * List the first name, last name, and hire date for the employees who were hired in 1986.
@@ -28,7 +36,7 @@ The EmployeeSQL is an attempt to set company's data ready to use. Below is a sum
 
 -----
 
-* Data Analysis
+## Data Analysis
 
 --Employees worked between '1980-01-01' AND '1990-12-31' 
 SELECT * FROM employees WHERE hire_date BETWEEN '1980/01/01' AND '1990/12/31';
@@ -87,7 +95,7 @@ FROM employees
 GROUP BY last_name
 ORDER BY frequency DESC;
 
-To come up with these analysis, I had to first normalize data, then started the process of data modeling and then I was able to extract the above copied code. I have the analysis of data in separate csv files in my git hub. 
+To come up with these analysis, I had to first normalize data, run the process of data modeling and then run specific statements for each code. 
 
 
 -----
